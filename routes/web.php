@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +17,15 @@ Route::redirect('/', 'home');
 
 Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home', function () {
+    $attendances = App\Models\Attendance::query()
+        ->where('session_id', 712872)
+        ->with('user')
+        ->get();
+
+    return view('home', compact('attendances'));
+})->name('home');
+
+Route::view('scan', 'scan')->name('scan');
+
+Route::view('generate', 'generate')->name('generate');

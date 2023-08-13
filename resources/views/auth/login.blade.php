@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="card card-md">
-    <div class="card-body">
-        <div class="card-title fw-bold text-center">{{ __('Login') }}</div>
+    <div class="card-body text-center">
+        <div class="card-title fw-bold">{{ __('Login') }}</div>
     </div>
     <div class="card-body">
         <form method="POST" action="{{ route('login') }}">

@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@domain.com',
         ]);
 
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
+
+        $this->call([
+            AttendanceSeeder::class
+        ]);
     }
 }

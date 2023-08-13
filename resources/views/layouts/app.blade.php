@@ -20,6 +20,8 @@
             <div class="btn-list justify-content-center mb-4">
                 @auth
                 <a href="{{ route('home') }}" class="btn btn-sm">Home</a>
+                <a href="{{ route('generate') }}" class="btn btn-sm">Generate</a>
+                <a href="{{ route('scan') }}" class="btn btn-sm">Scan</a>
                 <a href="#" class="btn btn-sm" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
