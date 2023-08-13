@@ -1,4 +1,4 @@
-import 'bootstrap';
+import 'https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/js/tabler.min.js'
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
